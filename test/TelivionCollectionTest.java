@@ -7,7 +7,6 @@ import java.util.HashSet;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.capgemini.model.Car;
 import com.capgemini.model.Television;
 
 public class TelivionCollectionTest {
@@ -26,19 +25,17 @@ public class TelivionCollectionTest {
 		television4 = new Television("sony", "LED", false, 65000);
 
 	}
+
 	@Test
-	public void testTelevisionOrder()
-	{
-		
-		
+	public void testTelevisionOrder() {
+
 		HashSet<Television> television = new HashSet<>();
 		television.add(television1);
 		television.add(television2);
 		television.add(television3);
 		television.add(television2);
-		
+
 		assertEquals(3, television.size());
 	}
-	
 
 }

@@ -45,7 +45,7 @@ public class Television {
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(companyName , type );
+		return Objects.hash(companyName , type ,price);
 
 	}
 
@@ -58,7 +58,7 @@ public class Television {
 		if (this == obj)
 			return true;
 		Television l = (Television) obj;
-		if (this.companyName == l.companyName && this.type == l.type)
+		if (this.companyName == l.companyName && this.type == l.type && this.price ==l.price)
 			return true;
 		else
 			return false;

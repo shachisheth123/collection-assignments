@@ -2,7 +2,7 @@ package com.capgemini.model;
 
 import java.util.Objects;
 
-public class Car {
+public class Car implements Comparable<Car> {
 
 	private String make;
 	private String modelName;
@@ -10,7 +10,7 @@ public class Car {
 	private int price;
 
 	public Car(String make, String modelName, int yearManufactured, int price) {
-	
+
 		this.make = make;
 		this.modelName = modelName;
 		this.yearManufactured = yearManufactured;
@@ -48,9 +48,10 @@ public class Car {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(make , modelName,yearManufactured,price );
+		return Objects.hash(make, modelName);
 
 	}
 
@@ -69,5 +70,13 @@ public class Car {
 			return false;
 
 	}
+
+	 @Override
+	  public int compareTo(Car cars) {
+	  return this.make.compareTo(cars.make);
+	 }
+	 
+	
+	 
 
 }
